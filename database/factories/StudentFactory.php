@@ -20,10 +20,10 @@ class StudentFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->name(),
-            'age' => $this->faker->numberBetween(5, 18),
-            'class' => $this->faker->word(),
-            'roll' => $this->faker->unique()->numberBetween(1, 100),
+           'name'  => $this->faker->name(),
+            'age'   => $this->faker->numberBetween(10, 20),
+            'class' => $this->faker->randomElement(['Six', 'Seven', 'Eight', 'Nine', 'Ten']),
+            'roll'  => $this->faker->unique()->numberBetween(1, 100),
         ];
     }
 }

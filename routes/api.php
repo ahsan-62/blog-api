@@ -15,3 +15,4 @@ Route::get("/post",function(){
 
 
 Route::get('/students',[StudentController::class,'students']);
+Route::post('/add',[StudentController::class,'addstudent']);

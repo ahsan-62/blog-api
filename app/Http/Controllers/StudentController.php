@@ -3,10 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Student;
+
 
 class StudentController extends Controller
 {
     function students(){
-        return 'I am here';
+        $student=Student::all();
+        return $student;
     }
+
+    function addstudent(Request $req){
+      return $req->input();
+    }
+ 
 }
