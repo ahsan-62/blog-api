@@ -10,9 +10,12 @@ Route::get('/user', function (Request $request) {
 
 
 Route::get("/post",function(){
-    return ["name"=>"Ahsan","Age"=>"15"]; 
+    return ["name"=>"Ahsan","Age"=>"15"];
 });
 
 
 Route::get('/students',[StudentController::class,'students']);
 Route::post('/add-students',[StudentController::class,'addstudent']);
+Route::put('/update-students',[StudentController::class,'updatestudent']);
+Route::delete('/delete-students/{id}',[StudentController::class,'deletestudent']);
+Route::get('/search/{name}',[StudentController::class,'searchstudent']);
