@@ -19,3 +19,5 @@ Route::post('/add-students',[StudentController::class,'addstudent']);
 Route::put('/update-students',[StudentController::class,'updatestudent']);
 Route::delete('/delete-students/{id}',[StudentController::class,'deletestudent']);
 Route::get('/search/{name}',[StudentController::class,'searchstudent']);
+Route::get('/sort/{name}',[StudentController::class,'sortstudent']);
+Route::get('/pagination',[StudentController::class,'paginationstudent']);
